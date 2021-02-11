@@ -1,0 +1,60 @@
+# Effects on Air Quality During COVID-19
+​
+### Final Project
+​
+Submitted in partial fulfillment of course requirements for DSCI511 Data Acquisition and Pre-Processing (Spring 2020) to Ali Jazayeri on June 6, 2020.
+​
+Team Members: Madhumitha Santhana Krishnan, Kunal Sharma, Shannon Zapotocky, Aviad Reuenny 
+​
+College of Computing & Informatics<br>
+Drexel University<br>
+Philadelphia PA 19104
+​
+### ABSTRACT
+​
+COVID-19 (also referred to as coronavirus) has impacted every corner of the globe, with every country reporting cases according to Johns Hopkins University's Coronavirus [tracker](https://coronavirus.jhu.edu/map.html). Governments - at the national, state and local level - have ordered the closure of non-essential business, organizations and schools. Social distancing rules and stay at home orders have been implemented in an effort to slow the spread of the disease. These actions have resulted in the shuttering of factories and have led to significant decreases in energy consumption. This in turn has reduced air pollution and improved air quality in many cities and countries known for poor air conditions. 
+
+By looking at a variety of pollutant measurements, we can determine the impact of COVID-19 on air quality. Additionally, as localities begin to restart their economies and return to normalcy, we likely will see a rise in pollution. Essentially, we want to know if air quality can be a proxy for economic activity. Further, we want to mine social media data to see if users are mentioning air quality impacts. Analyzing pictures from social media may also serve as a signal as to the quality of air in certain geographies.
+​
+### DATA
+
+- `Breezometer_data.csv` - Current polluntant data from BreeoMeter API
+- `US_historical_pollutant_data.csv` - Historical pollutant data from specific US geographies.
+- `out.csv` - 
+- `state_wise_daily_India.csv` - 
+​
+### CODE
+​
+- Project_COVID_AirQuality - Gather coordiante data from OpenStreet API which was then fed into Breezometer and AirNow APIs and responses put into dataframes
+​
+### REQUIREMENTS
+​
+In order to use the notebook in this project, you will need the following libraries:
+​
+- pandas
+- numpy
+- re
+- time
+- datetime
+- bs4
+- urllib
+- requests
+- pprint
+- sys
+- tweepy
+- csv
+- pytrends
+- PIL
+ 
+​
+### CHALLENGES
+​
+- API Rate Limitations 
+  - Breezometer API has a limit of 3 queries per second, 170 objects per second and 1,000 objects per day during the free 14 day trial. Therefore, we had to limit the number of longitude and latitude coordinate pairs we could send to the API
+  - AirNow had hourly limits that were not explicitly stated in their [API](https://docs.airnowapi.org/faq) documentation. However the response from the API would error upon exeding hourly limits.
+- Date Size - data sets are memory and run time intensive. Given additional computing resources we would have been able to do further analyses.
+
+​
+### IMPROVEMENTS
+​
+With greater resources this project could have captured additional data that could provide a more accurate and wider picture of how the social restrictions implemented across the world due to the coronavirus impacted air quality.
